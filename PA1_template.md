@@ -53,10 +53,6 @@ per day
 print(paste("The mean of the total number of steps taken per day is ", mean(tot.n.steps.perday$steps),"and has a median of ", median(tot.n.steps.perday$steps)))
 ```
 
-```
-## [1] "The mean of the total number of steps taken per day is  10766.1886792453 and has a median of  10765"
-```
-
 ## What is the average daily activity pattern?
 
 1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis)
@@ -80,10 +76,6 @@ contains the maximum number of steps?
         Maxinterval <- Mean_steps$interval[Mean_steps$mean == maxsteps]
         print(paste(Maxinterval," is the interval with maximum number of steps of ", maxsteps, " steps"))
 ```
-
-```
-## [1] "835  is the interval with maximum number of steps of  206.169811320755  steps"
-```
 ## Imputing missing values
 1. Calculate and report the total number of missing values in the dataset
 (i.e. the total number of rows with NAs)
@@ -92,10 +84,6 @@ contains the maximum number of steps?
 ```r
         missingdata <- sum(is.na(data$steps))
         print(paste("There are", missingdata, "missing data points."))
-```
-
-```
-## [1] "There are 2304 missing data points."
 ```
 
 2. Devise a strategy for filling in all of the missing values in the dataset. The
@@ -126,10 +114,6 @@ daily number of steps?
 
 ```r
         print(paste("The mean of the total number of steps taken per day after NA is replaced is ",mean(betterdataday$steps),"and has a median of ", median(betterdataday$steps)))                
-```
-
-```
-## [1] "The mean of the total number of steps taken per day after NA is replaced is  9354.22950819672 and has a median of  10395"
 ```
 The mean and median has changed, and has made the histogram to skew
 
